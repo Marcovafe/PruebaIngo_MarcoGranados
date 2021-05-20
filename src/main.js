@@ -32,7 +32,7 @@ function createItem(element) {
   //Se definen las variables a usar para poder observar los items.
   var itemDivParent = document.createElement("div");
   var itemDivImg = document.createElement("div");
-
+  var img = document.createElement("img");
   var itemDescrpParent = document.createElement("div");
   var itemPrice = document.createElement("div");
   var itemName = document.createElement("div");
@@ -65,12 +65,17 @@ function createItem(element) {
   itemName.classList.add("left");
   itemName.innerHTML = element.name;
 
+  //Se añade la imagen del item
+  img.src=element.image
+  img.alt=element.name
+  img.classList.add("imgItemIMG")
+  itemDivImg.appendChild(img)
   //se agrega la clase respectiva para el container padre y el id del item
   itemDivParent.classList.add("grid-item");
   itemDivParent.id = element.id;
   itemDivImg.classList.add("imgItem");
   //Se añade la imagen del producto al contenedor respectivo
-  itemDivImg.style.backgroundImage = `url(${element.image})`;
+  //itemDivImg.style.backgroundImage = `url(${element.image})`;
   /* Por ultimo se añaden todos las variables al contenedor principal del item y tambien se
     agrega al padre de todos los items.
 */

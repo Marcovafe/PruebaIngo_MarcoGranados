@@ -1,11 +1,12 @@
 body {
+  font-family: "KoHo", sans-serif;
   display: flex;
   justify-content: center;
 }
 .grid-container {
   display: grid;
   grid-template-columns: 220px 220px 220px 220px;
-  grid-gap: 100px;
+  grid-gap: 75px;
   background-color: #fff;
   padding: 10px;
 }
@@ -16,22 +17,25 @@ body {
   width: 220px;
   font-size: 30px;
   margin: 0 auto;
+  border: 2px solid rgb(0, 0, 0, 0.086);
+  border-radius: 40px 39px 40px 40px;
 }
 .imgItem {
   position: relative;
   height: 260px;
   width: 220px;
   display: flex;
+}
+.imgItemIMG {
+  height: 260px;
+  width: 220px;
   border-radius: 10px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 5px 5px rgb(0, 0, 0, 0.086),
-    0 10px 8px rgba(0, 0, 0, 0.086), 0 12px 12px rgba(0, 0, 0, 0.086),
-    0 10px 15px rgba(0, 0, 0, 0.086);
+  box-shadow: 2px 5px 9px gray;
   background-size: 220px 260px;
   background-repeat: no-repeat;
 }
-.imgItem:hover{
-  animation: shake 1s;
+.imgItem:hover {
+  animation: shake 0.75s;
   animation-iteration-count: 1;
 }
 /* DEFINO LA ANIMACION SHAKE
@@ -40,33 +44,21 @@ body {
   0%,
   100% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
-  10% {
+  30% {
     -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
+    transform: rotate(4deg);
   }
-  20%,
-  40%,
   60% {
-    -webkit-transform: rotate(-6deg);
-            transform: rotate(-6deg);
-  }
-  30%,
-  50%,
-  70% {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
-  }
-  80% {
     -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+    transform: rotate(-4deg);
   }
   90% {
     -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
+    transform: rotate(4deg);
   }
 }
 
@@ -88,7 +80,7 @@ body {
   border-radius: 10px;
   text-align: center;
   opacity: 0;
-  transition: opacity .35s ease;
+  transition: opacity 0.35s ease;
   z-index: 1;
 }
 .right {
@@ -106,14 +98,15 @@ body {
 }
 .itemName {
   position: absolute;
-  font-size: 15px;
-  width: 180px;
+  margin-top: 10px;
+  font-size: 14px;
+  width: 200px;
 }
 .itemDescrp {
   margin-top: 10px;
   position: absolute;
   margin-left: 15px;
-  width: 90px;
+  width: 200px;
 }
 .middle {
   top: 50%;
@@ -127,6 +120,7 @@ body {
 @media (max-width: 1240px) {
   .grid-container {
     grid-template-columns: 220px 220px 220px;
+    grid-gap: 65px;
   }
 }
 @media (max-width: 915px) {
