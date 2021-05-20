@@ -70,6 +70,7 @@ body {
   width: 65px;
   border-radius: 10px;
   text-align: center;
+  border: 1px solid white;
 }
 .buttonBuy {
   background-color: green;
